@@ -59,7 +59,7 @@ form input {
   display: block;
   width: 100%;
   margin-top: 35px;
-  background: linear-gradient(90deg, #4285F4, #6A5AF9, #C34EF4);
+  background: var(--button-backgorund-color);
   color:#fff;
   font-size: 16px;
 }
