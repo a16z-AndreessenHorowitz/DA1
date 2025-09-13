@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
   --color-button:#1876D1;
-  --color-text:#202021;
+  --color-text:#433753;
   --font-family: "Montserrat", sans-serif;
+  --button-backgorund-color:linear-gradient(90deg, #4285F4, #6A5AF9, #C34EF4);
 }
 
 body{
