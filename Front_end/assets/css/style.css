@@ -27,6 +27,11 @@
   width: 100%;
 
 }
+.login .inner-desc{
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 400;
+}
 
 .title {
   font-size: 30px; 
@@ -58,8 +63,21 @@ form input {
   border: 1px solid #ccc;
   display: block;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 30px;
   background: var(--button-backgorund-color);
   color:#fff;
   font-size: 16px;
+}
+
+.forgetpassword{
+  display: block;
+  float:right;
+  margin-right: 0;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.forgetpassword:hover {
+  text-decoration: underline; /* hiệu ứng hover */
 }
