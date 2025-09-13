@@ -1,83 +1,338 @@
-.inner-image{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-.inner-image::after {
-  content: "";
-  position: absolute;
-  inset: 0; /* phủ toàn bộ  = top:0; right:0; bottom:0; left:0 */
-  background: rgba(194, 166, 182, 0.2);
-}
-.inner-image img{
-  height: 100%;
-  width: auto;
-}
-.inner-login {
-  display: flex;
-  height: 100vh;
-}
+/* css form login */
+body {
+      background: #f5f6fa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
+    .login-container {
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      padding: 0;
+      overflow: hidden;
+    }
 
-.login {
-  max-width: 350px;
-  width: 100%;
+    .login-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f2f6;
+      padding: 32px;
+    }
 
-}
-.login .inner-desc{
-  margin-bottom: 15px;
-  font-size: 15px;
-  font-weight: 400;
-}
+    .login-image img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      transition: max-width 0.3s;
+    }
 
-.title {
-  font-size: 30px; 
-  font-weight: 500;  
-  margin-bottom: 20px; 
-  text-align: center;
-  color: var(--color-text);
-}
+    .login-form {
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-form label {
-  display: block;  
-  margin-bottom: 6px;
-  font-weight: 500; 
-  color:var(--color-text);  
-}
+    .login-form .title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 24px;
+      text-align: center;
+    }
 
-form input {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  font-size: 14px;
-}
- 
-.buttonSetup{
-  display: flex;
-  border: 1px solid #ccc;
-  display: block;
-  width: 100%;
-  margin-top: 30px;
-  background: var(--button-backgorund-color);
-  color:#fff;
-  font-size: 16px;
-}
+    .login-form .form-control {
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
 
-.forgetpassword{
-  display: block;
-  float:right;
-  margin-right: 0;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-}
-.forgetpassword:hover {
-  text-decoration: underline; /* hiệu ứng hover */
-}
+    .login-form .btn {
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #0984e3;
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    .login-form .btn:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+
+    .login-form .forgetpassword {
+      display: block;
+      text-align: right;
+      margin-top: 12px;
+      color: #636e72;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .login-form .forgetpassword:hover {
+      color: #0984e3;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .login-container {
+        border-radius: 8px;
+      }
+
+      .login-image {
+        padding: 24px 8px;
+      }
+
+      .login-image img {
+        max-width: 200px;
+      }
+
+      .login-form {
+        padding: 24px 8px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .login-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .login-image {
+        padding: 16px 0 8px 0;
+      }
+
+      .login-image img {
+        top: 0;
+        max-width: 500px;
+      }
+
+      .login-form .title {
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+      }
+
+      .login-form {
+        padding: 16px 4px;
+      }
+    }
+    .login-image {
+      animation: fadeInLeft 0.8s ease;
+    }
+    .login-form {
+      animation: fadeInUp 1s ease;
+    }
+    /* animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* css form forgot-password */
+    body {
+      background: #f5f6fa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .forgot-container {
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 0;
+      overflow: hidden;
+    }
+    .forgot-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f2f6;
+      padding: 32px;
+      animation: fadeInLeft 0.8s ease;
+    }
+    .forgot-image img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      transition: max-width 0.3s;
+    }
+    .forgot-form {
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeInUp 1s ease;
+    }
+    .forgot-form .title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .forgot-form .inner-desc {
+      color: #636e72;
+      font-size: 1rem;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .forgot-form .form-control {
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .forgot-form .btn {
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #0984e3;
+      color: #fff;
+      margin-top: 8px;
+    }
+    .forgot-form .btn:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+    @media (max-width: 768px) {
+      .forgot-container {
+        border-radius: 8px;
+      }
+      .forgot-image {
+        padding: 24px 8px;
+      }
+      .forgot-image img {
+        max-width: 200px;
+      }
+      .forgot-form {
+        padding: 24px 8px;
+      }
+    }
+    @media (max-width: 576px) {
+      .forgot-container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+      .forgot-image {
+        padding: 16px 0 8px 0;
+      }
+      .forgot-image img {
+        max-width: 180px;
+      }
+      .forgot-form .title {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+      }
+      .forgot-form {
+        padding: 16px 4px;
+      }
+    }
+    /*  */
+    /* css form reset password */
+    body {
+      background: #f5f6fa;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .reset-container {
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 0;
+      overflow: hidden;
+    }
+    .reset-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f2f6;
+      padding: 32px;
+      animation: fadeInLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-delay: 0.1s;
+    }
+    .reset-image img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      transition: max-width 0.3s;
+    }
+    .reset-form {
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1);
+      opacity: 0;
+      animation-fill-mode: forwards;
+      animation-delay: 0.4s;
+    }
+    .reset-form .title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .reset-form .form-control {
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    .reset-form .btn {
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #0984e3;
+      color: #fff;
+      margin-top: 8px;
+    }
+    .reset-form .btn:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+    @media (max-width: 768px) {
+      .reset-container { border-radius: 8px; }
+      .reset-image { padding: 24px 8px; }
+      .reset-image img { max-width: 200px; }
+      .reset-form { padding: 24px 8px; }
+    }
+    @media (max-width: 576px) {
+      .reset-container { box-shadow: none; border-radius: 0; }
+      .reset-image { padding: 16px 0 8px 0; }
+      .reset-image img { max-width: 180px; }
+      .reset-form .title { font-size: 1.3rem; margin-bottom: 12px; }
+      .reset-form { padding: 16px 4px; }
+    }

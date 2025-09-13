@@ -10,47 +10,23 @@
 </head>
 
 <body>
-  <div class="row">
-    <div class="inner-login">
-      <div class="col-7">
-        <div class="inner-image">
-          <div class="image">
-            <img src="../../assets/images/login.png" alt="Login">
-          </div>
-        </div>
-      </div>
-
-      <div class="col-5 d-flex align-items-center justify-content-center">
-        <div class="login">
-          <div class="title mb-2">Đăng nhập</div>
-          <form action="">
-            <label for="name-1">Tài khoản đăng nhập</label>
-            <input type="text" name="email" id="name-1" placeholder="Nhập email" class="form-control" required/>
-            <label for="name-2">Mật khẩu</label>
-            <input type="password" name="password" id="name-2" class="form-control"  placeholder="Nhập mật khẩu" required/>
-            <button type="submit" class="btn buttonSetup"> Đăng nhập</button>
-          </form>
-          <a href="" class="forgetpassword"> Quên mật khẩu?</a>
-        </div>
-      </div>
+  <div class="login-container row g-0">
+    <div class="login-image col-md-6 col-12 d-flex align-items-center justify-content-center">
+      <img src="../../assets/images/login.png" alt="Login">
     </div>
-
+    <div class="login-form col-md-6 col-12">
+      <div class="title">Đăng nhập</div>
+      <form action="">
+        <label for="name-1">Tài khoản đăng nhập</label>
+        <input type="text" name="email" id="name-1" placeholder="Nhập email" class="form-control" required />
+        <label for="name-2">Mật khẩu</label>
+        <input type="password" name="password" id="name-2" class="form-control" placeholder="Nhập mật khẩu"
+          required />
+        <button type="submit" class="btn w-100">Đăng nhập</button>
+      </form>
+      <a href="/Front_end/pages/client/forgot-password.html" class="forgetpassword">Quên mật khẩu?</a>
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script src="../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
